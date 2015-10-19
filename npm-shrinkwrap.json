@@ -4,7 +4,7 @@
   "dependencies": {
     "cheerio": {
       "version": "0.19.0",
-      "from": "cheerio@*",
+      "from": "cheerio@0.19.0",
       "resolved": "https://registry.npmjs.org/cheerio/-/cheerio-0.19.0.tgz",
       "dependencies": {
         "css-select": {
@@ -121,7 +121,7 @@
     },
     "commander": {
       "version": "2.9.0",
-      "from": "commander@*",
+      "from": "commander@2.9.0",
       "resolved": "https://registry.npmjs.org/commander/-/commander-2.9.0.tgz",
       "dependencies": {
         "graceful-readlink": {
@@ -133,7 +133,7 @@
     },
     "request": {
       "version": "2.65.0",
-      "from": "request@*",
+      "from": "request@2.65.0",
       "resolved": "https://registry.npmjs.org/request/-/request-2.65.0.tgz",
       "dependencies": {
         "bl": {
