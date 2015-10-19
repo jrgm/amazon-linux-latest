@@ -5,11 +5,38 @@ const scraper = require('./lib')
 
 function options() {
   commander
-    .option('-R, --region [region]', 'AWS region')
+    .option('-R, --region [region]', 'AWS region [region]',
+            function(arg) {
+              var re = /^(?:us|eu|ap|cn)-(?:east|west|central|northeast|southeast|gov)-[12]$/
+              if (!re.exec(arg)) {
+                throw new Error('Invalid region option value: ' + arg)
+              }
+              return arg
+            })
     .option('-S, --storage [type]', 'Storage type [ebs, instance]',
-            /^(ebs|instance)$/)
+            function(arg) {
+              var re = /^(ebs|instance)$/
+              if (!re.exec(arg)) {
+                throw new Error('Invalid storage option value: ' + arg)
+              }
+              return arg
+            })
     .option('-V, --virtualization [type]', 'Virtualization type [hvm, pv]',
-            /^(hvm|pv)$/)
+            function(arg) {
+              var re = /^(hvm|pv)$/
+              if (!re.exec(arg)) {
+                throw new Error('Invalid virtualization option value: ' + arg)
+              }
+              return arg
+            })
+    .option('-O, --output <type>', 'Output format [json, csv]',
+            function(arg) {
+              var re = /^(json|csv)$/
+              if (!re.exec(arg)) {
+                throw new Error('Invalid output option value: ' + arg)
+              }
+              return arg
+            }, 'json')
     .parse(process.argv);
 }
 
@@ -52,8 +79,12 @@ function run() {
       }
       return true
     })
-    //console.log(JSON.stringify(amis, null, 2))
-    printCSV(amis)
+
+    if (commander.output === 'json') {
+      console.log(JSON.stringify(amis, null, 2))
+    } else if (commander.output === 'csv') {
+      printCSV(amis)
+    }
   })
 }
 
