@@ -16,5 +16,8 @@
   },
   "devDependencies": {
     "jshint": "2.8.0"
+  },
+  "scripts": {
+    "test": "jshint index.js lib"
   }
 }

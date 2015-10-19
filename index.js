@@ -47,7 +47,9 @@ function printCSV(list) {
     'virtualizationType',
     'storageType'
   ]
+
   console.log(keys.join(','))
+
   list.forEach(function(elt) {
     keys.forEach(function(key, idx) {
       process.stdout.write(elt[key])
@@ -62,6 +64,7 @@ function printCSV(list) {
 
 function run() {
   options()
+
   scraper(function(err, amis) {
     if (err) {
       return console.error(err)
