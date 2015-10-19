@@ -1,0 +1,22 @@
+{
+  "asi": true,
+  "boss": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "esnext": true,
+  "expr": true,
+  "forin": false,
+  "indent": 2,
+  "laxbreak": true,
+  "laxcomma": true,
+  "maxerr": 100,
+  "noarg": true,
+  "node": true,
+  "passfail": false,
+  "shadow": false,
+  "strict": false,
+  "supernew": false,
+  "undef": true,
+  "unused": true,
+  "white": false
+}

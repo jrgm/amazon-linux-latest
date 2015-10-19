@@ -1,18 +1,15 @@
 #!/usr/bin/env node
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const commander = require('commander')
 const scraper = require('./lib')
 
 function options() {
   commander
-    .option('-R, --region [region]', 'AWS region', 'all')
+    .option('-R, --region [region]', 'AWS region')
     .option('-S, --storage [type]', 'Storage type [ebs, instance]',
-            /^(ebs|instance)$/, 'ebs')
+            /^(ebs|instance)$/)
     .option('-V, --virtualization [type]', 'Virtualization type [hvm, pv]',
-            /^(hvm|pv)$/, 'hvm')
+            /^(hvm|pv)$/)
     .parse(process.argv);
 }
 
@@ -44,14 +41,14 @@ function run() {
     }
 
     amis = amis.filter(function(elt) {
-      if (commander.region !== 'all' && elt.region !== commander.region) {
-        return
+      if (commander.region && elt.region !== commander.region) {
+        return false
       }
-      if (elt.storageType !== commander.storage) {
-        return
+      if (commander.storage && elt.storageType !== commander.storage) {
+        return false
       }
-      if (elt.virtualizationType !== commander.virtualization) {
-        return
+      if (commander.virtualization && elt.virtualizationType !== commander.virtualization) {
+        return false
       }
       return true
     })
