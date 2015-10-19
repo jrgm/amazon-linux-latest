@@ -1,0 +1,17 @@
+{
+  "name": "amazon-linux-latest",
+  "version": "1.0.0",
+  "description": "List the most recent Amazon Linux AMI by region/type per http://aws.amazon.com/amazon-linux-ami/",
+  "main": "index.js",
+  "author": "John Morrison <jrgmorrison@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrgm/amazon-linux-latest.git"
+  },
+  "dependencies": {
+    "cheerio": "0.19.0",
+    "commander": "2.9.0",
+    "request": "2.65.0"
+  }
+}
