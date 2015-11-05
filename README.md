@@ -22,7 +22,7 @@ http://aws.amazon.com/amazon-linux-ami/.
     -o, --output <type>          Output format [json, csv]
 
 
-
+```
   $ node index.js -o csv -s ebs -v hvm
 
   name,region,virtualizationType,storageType
@@ -37,3 +37,4 @@ http://aws.amazon.com/amazon-linux-ami/.
   ami-6817af04,sa-east-1,hvm,ebs
   ami-43a36a2e,cn-north-1,hvm,ebs
   ami-c2b5d7e1,us-gov-west-1,hvm,ebs
+```
