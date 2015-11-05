@@ -5,7 +5,7 @@ const scraper = require('./lib')
 
 function options() {
   commander
-    .option('-R, --region [region]', 'AWS region [region]',
+    .option('-r, --region [region]', 'AWS region [region]',
             function(arg) {
               var re = /^(?:us|eu|ap|cn)-(?:east|west|central|northeast|southeast|gov)-[12]$/
               if (!re.exec(arg)) {
@@ -13,7 +13,7 @@ function options() {
               }
               return arg
             })
-    .option('-S, --storage [type]', 'Storage type [ebs, instance]',
+    .option('-s, --storage [type]', 'Storage type [ebs, instance]',
             function(arg) {
               var re = /^(ebs|instance)$/
               if (!re.exec(arg)) {
@@ -21,7 +21,7 @@ function options() {
               }
               return arg
             })
-    .option('-V, --virtualization [type]', 'Virtualization type [hvm, pv]',
+    .option('-v, --virtualization [type]', 'Virtualization type [hvm, pv]',
             function(arg) {
               var re = /^(hvm|pv)$/
               if (!re.exec(arg)) {
@@ -29,7 +29,7 @@ function options() {
               }
               return arg
             })
-    .option('-O, --output <type>', 'Output format [json, csv]',
+    .option('-o, --output <type>', 'Output format [json, csv]',
             function(arg) {
               var re = /^(json|csv)$/
               if (!re.exec(arg)) {

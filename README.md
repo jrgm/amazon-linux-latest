@@ -10,24 +10,30 @@ http://aws.amazon.com/amazon-linux-ami/.
 
   Options:
 
+
+  Usage: index [options]
+
+  Options:
+
     -h, --help                   output usage information
-    -R, --region [region]        AWS region [region]
-    -S, --storage [type]         Storage type [ebs, instance]
-    -V, --virtualization [type]  Virtualization type [hvm, pv]
-    -O, --output <type>          Output format [json, csv]
+    -r, --region [region]        AWS region [region]
+    -s, --storage [type]         Storage type [ebs, instance]
+    -v, --virtualization [type]  Virtualization type [hvm, pv]
+    -o, --output <type>          Output format [json, csv]
 
 
-  $ node index.js --virtualization hvm --storage ebs --output csv
+
+  $ node index.js -o csv -s ebs -v hvm
 
   name,region,virtualizationType,storageType
-  ami-e3106686,us-east-1,hvm,ebs
-  ami-9ff7e8af,us-west-2,hvm,ebs
-  ami-cd3aff89,us-west-1,hvm,ebs
-  ami-69b9941e,eu-west-1,hvm,ebs
-  ami-daaeaec7,eu-central-1,hvm,ebs
-  ami-52978200,ap-southeast-1,hvm,ebs
-  ami-9a2fb89a,ap-northeast-1,hvm,ebs
-  ami-c11856fb,ap-southeast-2,hvm,ebs
-  ami-3b0c9926,sa-east-1,hvm,ebs
-  ami-6cb22e55,cn-north-1,hvm,ebs
-  ami-ad34568e,us-gov-west-1,hvm,ebs
+  ami-60b6c60a,us-east-1,hvm,ebs
+  ami-f0091d91,us-west-2,hvm,ebs
+  ami-d5ea86b5,us-west-1,hvm,ebs
+  ami-bff32ccc,eu-west-1,hvm,ebs
+  ami-bc5b48d0,eu-central-1,hvm,ebs
+  ami-c9b572aa,ap-southeast-1,hvm,ebs
+  ami-383c1956,ap-northeast-1,hvm,ebs
+  ami-48d38c2b,ap-southeast-2,hvm,ebs
+  ami-6817af04,sa-east-1,hvm,ebs
+  ami-43a36a2e,cn-north-1,hvm,ebs
+  ami-c2b5d7e1,us-gov-west-1,hvm,ebs
