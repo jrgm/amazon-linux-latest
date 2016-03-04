@@ -10,12 +10,12 @@
     "url": "https://github.com/jrgm/amazon-linux-latest.git"
   },
   "dependencies": {
-    "cheerio": "0.19.0",
+    "cheerio": "0.20.0",
     "commander": "2.9.0",
-    "request": "2.65.0"
+    "request": "2.69.0"
   },
   "devDependencies": {
-    "jshint": "2.8.0"
+    "jshint": "2.9.1"
   },
   "scripts": {
     "test": "jshint index.js lib"
