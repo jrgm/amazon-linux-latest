@@ -25,16 +25,29 @@ http://aws.amazon.com/amazon-linux-ami/.
 ```
   $ node index.js -o csv -s ebs -v hvm
 
-  name,region,virtualizationType,storageType
-  ami-60b6c60a,us-east-1,hvm,ebs
-  ami-f0091d91,us-west-2,hvm,ebs
-  ami-d5ea86b5,us-west-1,hvm,ebs
-  ami-bff32ccc,eu-west-1,hvm,ebs
-  ami-bc5b48d0,eu-central-1,hvm,ebs
-  ami-c9b572aa,ap-southeast-1,hvm,ebs
-  ami-383c1956,ap-northeast-1,hvm,ebs
-  ami-48d38c2b,ap-southeast-2,hvm,ebs
-  ami-6817af04,sa-east-1,hvm,ebs
-  ami-43a36a2e,cn-north-1,hvm,ebs
-  ami-c2b5d7e1,us-gov-west-1,hvm,ebs
+  name,region,virtualizationType,storageType,hvmSubType
+  ami-8fcee4e5,us-east-1,hvm,ebs,ssd
+  ami-a7f5dfcd,us-east-1,hvm,ebs,nat
+  ami-63b25203,us-west-2,hvm,ebs,ssd
+  ami-87af4fe7,us-west-2,hvm,ebs,nat
+  ami-d1f482b1,us-west-1,hvm,ebs,ssd
+  ami-9df482fd,us-west-1,hvm,ebs,nat
+  ami-e1398992,eu-west-1,hvm,ebs,ssd
+  ami-3836864b,eu-west-1,hvm,ebs,nat
+  ami-d22932be,eu-central-1,hvm,ebs,ssd
+  ami-17273c7b,eu-central-1,hvm,ebs,nat
+  ami-0103cd62,ap-southeast-1,hvm,ebs,ssd
+  ami-8404cae7,ap-southeast-1,hvm,ebs,nat
+  ami-4d1fd123,ap-northeast-2,hvm,ebs,ssd
+  ami-421fd12c,ap-northeast-2,hvm,ebs,nat
+  ami-59bdb937,ap-northeast-1,hvm,ebs,ssd
+  ami-f7a0a499,ap-northeast-1,hvm,ebs,nat
+  ami-11032472,ap-southeast-2,hvm,ebs,ssd
+  ami-4802252b,ap-southeast-2,hvm,ebs,nat
+  ami-f0f4779c,sa-east-1,hvm,ebs,ssd
+  ami-c7fb78ab,sa-east-1,hvm,ebs,nat
+  ami-0637ff6b,cn-north-1,hvm,ebs,ssd
+  ami-0537ff68,cn-north-1,hvm,ebs,nat
+  ami-cde15dac,us-gov-west-1,hvm,ebs,ssd
+  ami-48dd6129,us-gov-west-1,hvm,ebs,nat
 ```
