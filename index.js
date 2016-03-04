@@ -45,15 +45,17 @@ function printCSV(list) {
     'name',
     'region',
     'virtualizationType',
-    'storageType'
+    'storageType',
+    'hvmSubType'
   ]
 
   console.log(keys.join(','))
 
   list.forEach(function(elt) {
     keys.forEach(function(key, idx) {
-      process.stdout.write(elt[key])
-      if (idx === 3) {
+      var value = elt[key] || 'n/a'
+      process.stdout.write(value)
+      if (idx === keys.length - 1) {
         process.stdout.write('\n')
       } else {
         process.stdout.write(',')
