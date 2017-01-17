@@ -53,7 +53,7 @@ function printCSV(list) {
 
   list.forEach(function(elt) {
     keys.forEach(function(key, idx) {
-      var value = elt[key] || 'n/a'
+      var value = elt[key] || 'n/x'
       process.stdout.write(value)
       if (idx === keys.length - 1) {
         process.stdout.write('\n')
