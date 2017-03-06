@@ -18,6 +18,7 @@ http://aws.amazon.com/amazon-linux-ami/.
     -h, --help                   output usage information
     -r, --region [region]        AWS region [region]
     -s, --storage [type]         Storage type [ebs, instance]
+    -t, --hvmSubType [type]      Hvm Sub type [ssd, nat]
     -v, --virtualization [type]  Virtualization type [hvm, pv]
     -o, --output <type>          Output format [json, csv]
 
