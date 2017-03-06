@@ -21,6 +21,14 @@ function options() {
               }
               return arg
             })
+    .option('-t, --hvmSubType [type]', 'Storage type [ssd, nat]',
+            function(arg) {
+              var re = /^(ssd|nat)$/
+              if (!re.exec(arg)) {
+                throw new Error('Invalid hvmSubtype value: ' + arg)
+              }
+              return arg
+            })
     .option('-v, --virtualization [type]', 'Virtualization type [hvm, pv]',
             function(arg) {
               var re = /^(hvm|pv)$/
@@ -77,6 +85,9 @@ function run() {
         return false
       }
       if (commander.storage && elt.storageType !== commander.storage) {
+        return false
+      }
+      if (commander.hvmSubType && elt.hvmSubType !== commander.hvmSubType) {
         return false
       }
       if (commander.virtualization && elt.virtualizationType !== commander.virtualization) {
